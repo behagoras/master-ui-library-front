@@ -1,23 +1,50 @@
-import logo from './logo.svg';
-import './App.css';
+import {CardGrid, sum} from '@behagoras/master-ui-library'
+const summed = sum(1,2)
+console.log(summed)
+
+const cards = [
+  {
+    header: 'header',
+    content: 'content',
+    footer: 'footer',
+    color:'red'
+  },
+  {
+    header: 'header',
+    content: 'content',
+    footer: 'footer',
+    color:'green'
+  },
+  {
+    header: 'header',
+    content: 'content',
+    footer: 'footer',
+    color:'blue',
+  },
+  {
+    header: 'header',
+    content: 'content',
+    footer: 'footer',
+    color:'cyan'
+  },
+  {
+    header: 'header',
+    content: 'content',
+    footer: 'footer',
+    color:'magenta',
+  },
+  {
+    header: 'header',
+    content: 'content',
+    footer: 'footer',
+    color:'yellow',
+  },
+]
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <CardGrid cards={cards} />
     </div>
   );
 }
